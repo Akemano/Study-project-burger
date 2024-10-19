@@ -1,0 +1,13 @@
+:root {
+    --open-sans: "Open Sans", sans-serif;
+    --nunito-sans: "Nunito Sans", sans-serif;
+
+    --accent-light: #FBB731;
+    --accent-dark: #F37335;
+    --dark: #443737;
+    --light: #FFFFFF;
+}
+
+body {
+    font-family: var(--open-sans);
+}
