@@ -9,6 +9,7 @@
     --light-rgb: 255, 255, 255;
     --dark-rgb: 68, 55, 55;
     --btn-accent: #FF8047;
+    --line: #DEDEDE;
 }
 
 body {
@@ -31,7 +32,7 @@ a {
 /*Header*/
 
 .header {
-    border-bottom: 1px solid #DEDEDE;
+    border-bottom: 1px solid var(--line);
 }
 
 .header-wrapper {
@@ -260,7 +261,7 @@ a {
 
 .menu-select {
     padding-left: 30px;
-    border: 1px solid #DEDEDE;
+    border: 1px solid var(--line);
     border-radius: 22px;
     font-size: 15px;
     font-weight: 400;
@@ -363,4 +364,94 @@ a {
 
 .menu-btn:hover {
     background-color: var(--btn-accent);
+}
+
+.menu-header-add {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #1E2F40;
+    padding-top: 111px;
+    padding-bottom: 119px;
+    margin-top: 140px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.logo-footer {
+    display: block;
+    width: 63px;
+    height: 56px;
+    background-image: url(../images/logo-light-min.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    color: var(--light);
+    font-weight: 800;
+    font-size: 20px;
+    font-family: var(--nunito-sans);
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.footer-link {
+    color: rgba(var(--light-rgb), 0.9);
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.footer-list {
+    color: var(--light);
+    font-size: 15px;
+    font-weight: 700;
+    list-style-type: none;
+    text-align: left;
+    padding-left: 0px;
+    row-gap: 5px;
+}
+
+.footer-list li {
+    line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.footer-span {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(var(--light-rgb), 0.9);
+
+}
+
+.footer-tel {
+    display: flex;
+    flex-direction: column;
+    line-height: 44px;
+    color: var(--accent-light);
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
 }
