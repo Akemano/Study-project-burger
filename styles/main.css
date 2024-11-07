@@ -116,6 +116,39 @@ a {
     top: 10px;
 }
 
+.button-up {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    max-width: 120px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--accent-light);
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--nunito-sans);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: -1px;
+    border: none;
+    color: #443737;
+    transition: var(--tr);
+}
+
+.button-up:hover {
+    background-color: var(--btn-accent);
+}
+
+.button-up.hidden {
+    opacity: 0;
+}
+
+.button-up.visible {
+    opacity: 1;
+}
+
 /*Hero*/
 
 .hero {
@@ -235,7 +268,10 @@ a {
 }
 
 .banner-btn {
-    padding: 20px 25px;
+    display: block;
+    text-align: center;
+    max-width: 170px;
+    padding: 20px 0px;
     border-radius: 5px;
     background-color: var(--accent-light);
     text-transform: uppercase;

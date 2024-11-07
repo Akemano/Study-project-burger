@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="headerTop">
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo"></div>
@@ -48,12 +48,12 @@
                 <h2 class="banner-title"><span class="bg">Скидка</span>-30%</h2>
                 <p class="banner-description">Только при&nbsp;покупке 3-х и более позиций,
                     мы дарим скидку. Акции не&nbsp;суммируются.</p>
-                <button type="button" class="banner-btn">Купить сейчас</button>
+                <a href="#menuBurger" class="banner-btn">Купить сейчас</a>
             </div>
         </div>
     </section>
     <main>
-        <section>
+        <section id="menuBurger">
             <div class="container">
                 <div class="menu">
                     <div class="menu-header">
@@ -188,6 +188,8 @@
             </div>
         </div>
     </footer>
+    <a href="#headerTop" class="button-up hidden visible" id="btnUp">Наверх</a>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
