@@ -10,6 +10,8 @@
     --dark-rgb: 68, 55, 55;
     --btn-accent: #FF8047;
     --line: #DEDEDE;
+
+    --tr: 0.3s;
 }
 
 body {
@@ -72,6 +74,7 @@ a {
     height: 3px;
     background-color: transparent;
     border-radius: 1.5px;
+    transition: var(--tr);
 }
 
 .nav-link:hover:after {
@@ -125,6 +128,16 @@ a {
     padding-bottom: 142px;
 }
 
+.hero-contact {
+    background-image: url(../images/hero-contact.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding-top: 142px;
+    padding-bottom: 142px;
+}
+
 .breadcrumbs {
     display: flex;
     align-items: center;
@@ -140,6 +153,7 @@ a {
 
 .breadcrumbs-link {
     color: rgba(var(--light-rgb), .5);
+    transition: var(--tr);
 }
 
 .breadcrumbs-item:not(:last-child)::after {
@@ -233,6 +247,7 @@ a {
     margin-top: -1px;
     border: none;
     color: #443737;
+    transition: var(--tr);
 }
 
 .banner-btn:hover {
@@ -348,6 +363,7 @@ a {
     border: none;
     background-color: var(--accent-light);
     position: relative;
+    transition: var(--tr);
 }
 
 .menu-btn::before {
@@ -420,6 +436,11 @@ a {
     font-weight: 400;
     font-size: 15px;
     cursor: pointer;
+    transition: var(--tr);
+}
+
+.footer-link:hover {
+    color: var(--accent-light);
 }
 
 .footer-list {
@@ -454,4 +475,165 @@ a {
     font-size: 20px;
     font-weight: 800;
     cursor: pointer;
+    transition: var(--tr);
+}
+
+.footer-tel:hover {
+    color: var(--btn-accent);
+}
+
+/* Contact */
+
+.contact {
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+.contact-main {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-map {
+    width: 680px;
+    height: 550px;
+    background-color: #D8D8D8;
+}
+
+.contact-map-info {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    width: 360px;
+}
+
+.contact-map-list {
+    font-size: 15px;
+    font-weight: 700;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.map-info-item {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.map-info-title {
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+}
+
+.map-info-adress {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 62px;
+    padding-left: 35px;
+    width: 1182px;
+    height: 82px;
+}
+
+.contact-icon-time span {
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.contact-icon-time h4 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.contact-icon-tel h4 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.contact-icon-place span {
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+.contact-icon-place h4 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.contact-tel {
+    font-family: var(--nunito-sans);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    color: black;
+}
+
+.contact-icon-tel {
+    position: relative;
+    margin-left: 45px;
+}
+
+.contact-icon-time {
+    position: relative;
+}
+
+.contact-icon-place {
+    position: relative;
+}
+
+.contact-icon-tel::before {
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/contact-tel.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -95px;
+    margin-top: 2px;
+}
+
+.contact-icon-time::before {
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/contact-time.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -95px;
+    margin-top: 2px;
+}
+
+.contact-icon-place::before {
+    content: '';
+    width: 80px;
+    height: 80px;
+    background-image: url(../images/contact-place.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -95px;
+    margin-top: 2px;
 }
