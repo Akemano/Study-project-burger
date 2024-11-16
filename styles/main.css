@@ -29,6 +29,7 @@ a {
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*Header*/
@@ -41,8 +42,20 @@ a {
     display: flex;
     align-items: center;
     gap: 56px;
+    gap: 56px;
     padding-top: 26px;
     padding-bottom: 26px;
+}
+
+.burger-menu {
+    display: none;
+    width: 34px;
+    height: 22px;
+    background-image: url(/images/menu-burger.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
 }
 
 .burger-menu {
@@ -69,6 +82,7 @@ a {
     flex-grow: 1;
     display: flex;
     gap: 47px;
+    margin-left: min(11vw, 140px);
     margin-left: min(11vw, 140px);
 }
 
@@ -246,6 +260,7 @@ a {
     background-image: url(../images/banner.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     background-position: center;
     padding: 100px;
 }
@@ -451,6 +466,7 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 15px;
+    gap: 15px;
 }
 
 
@@ -468,6 +484,7 @@ a {
     color: var(--light);
     font-weight: 800;
     font-size: 20px;
+    line-height: 150%;
     line-height: 150%;
     font-family: var(--nunito-sans);
     margin-top: 10px;
@@ -520,6 +537,10 @@ a {
     flex-basis: 194px;
 }
 
+.footer-item:last-child {
+    flex-basis: 194px;
+}
+
 .footer-tel {
     display: flex;
     flex-direction: column;
@@ -530,7 +551,12 @@ a {
     font-weight: 800;
     cursor: pointer;
     text-align: right;
+    text-align: right;
     transition: var(--tr);
+}
+
+.footer-tel._mobile {
+    display: none;
 }
 
 .footer-tel._mobile {
