@@ -16,7 +16,6 @@
 
 body {
     font-family: var(--open-sans);
-
 }
 
 a {
@@ -29,6 +28,7 @@ a {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    box-sizing: border-box;
 }
 
 /*Header*/
@@ -40,9 +40,20 @@ a {
 .header-wrapper {
     display: flex;
     align-items: center;
-    gap: 196px;
+    gap: 56px;
     padding-top: 26px;
     padding-bottom: 26px;
+}
+
+.burger-menu {
+    display: none;
+    width: 34px;
+    height: 22px;
+    background-image: url(/images/menu-burger.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
 }
 
 .logo {
@@ -58,6 +69,7 @@ a {
     flex-grow: 1;
     display: flex;
     gap: 47px;
+    margin-left: min(11vw, 140px);
 }
 
 .nav-link {
@@ -234,7 +246,7 @@ a {
     background-image: url(../images/banner.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center -160px;
+    background-position: center;
     padding: 100px;
 }
 
@@ -438,6 +450,7 @@ a {
 .footer-wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
 }
 
 
@@ -455,6 +468,7 @@ a {
     color: var(--light);
     font-weight: 800;
     font-size: 20px;
+    line-height: 150%;
     font-family: var(--nunito-sans);
     margin-top: 10px;
     margin-bottom: 20px;
@@ -502,6 +516,10 @@ a {
 
 }
 
+.footer-item:last-child {
+    flex-basis: 194px;
+}
+
 .footer-tel {
     display: flex;
     flex-direction: column;
@@ -511,7 +529,12 @@ a {
     font-size: 20px;
     font-weight: 800;
     cursor: pointer;
+    text-align: right;
     transition: var(--tr);
+}
+
+.footer-tel._mobile {
+    display: none;
 }
 
 .footer-tel:hover {
@@ -672,4 +695,273 @@ a {
     position: absolute;
     left: -95px;
     margin-top: 2px;
+}
+
+/* Media */
+
+@media (max-width: 1080px) {
+    .header-wrapper {
+        gap: 40px;
+    }
+
+    .nav {
+        margin-left: 0;
+        gap: min(3vw, 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+        height: 48px;
+    }
+
+    .header-wrapper {
+        gap: 45px;
+    }
+
+    .nav {
+        gap: 22px;
+    }
+
+    .banner {
+        margin-top: 72px;
+    }
+
+    .banner-wrapper {
+        padding: 100px 40px;
+        background-position: center;
+    }
+
+    .menu-header {
+        margin-top: 80px;
+    }
+
+    .menu-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-box._additionally {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item._additionally {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-item._additionally .menu-thumb {
+        flex-basis: calc(60% - 20px);
+        width: 100%;
+        height: 260px;
+    }
+
+    .menu-item._additionally .menu-info {
+        flex-basis: 40%;
+    }
+
+    footer {
+        padding-top: 62px;
+        padding-bottom: 71px;
+    }
+
+    .footer-item:last-child {
+        display: none;
+    }
+
+    .footer-tel._mobile {
+        display: block;
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 730px) {
+    .header-wrapper {
+        gap: 21px;
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav._modal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .logo {
+        width: 116.08px;
+        height: 37px;
+        flex-grow: 1;
+    }
+
+    .modal {
+        width: 100%;
+        max-width: 500px;
+        background-color: #FFF8DC;
+        padding: 40px 15px;
+        position: absolute;
+        top: -400px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        box-sizing: border-box;
+        text-align: center;
+        transition: var(--tr);
+    }
+
+    .modal-close {
+        display: block;
+        width: 22px;
+        height: 22px;
+        background-image: url(/images/close.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .hero {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .breadcrumbs {
+        font-size: 14px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .banner {
+        margin-top: 33px;
+        margin-bottom: 50px;
+    }
+
+    .banner-wrapper {
+        padding: 35px 20px;
+        background-position: 15%;
+        background-size: auto;
+    }
+
+    .banner-description {
+        font-size: 14px;
+    }
+
+    .menu-header {
+        margin-top: 53px;
+    }
+
+    .menu-title {
+        font-size: 27px;
+    }
+
+    .menu-select {
+        font-size: 12px;
+        width: 136px;
+        padding-left: 15px;
+    }
+
+    .select-wrapper::before {
+        top: 20px;
+        left: 112px;
+    }
+
+    .menu-box {
+        gap: 24px 20px;
+    }
+
+    .menu-thumb {
+        height: 50vw;
+    }
+
+    .menu-name {
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: -4px;
+    }
+
+    .menu-price {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+
+    .menu-btn {
+        width: 128px;
+        padding-left: 46px;
+    }
+
+    .menu-btn::before {
+        left: 23px;
+        top: 10px;
+    }
+
+    .menu-box._additionally .menu-thumb {
+        height: 30vw;
+    }
+
+    .footer {
+        margin-top: 80px;
+        padding-top: 61px;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+        gap: 33px;
+        position: relative;
+    }
+
+    .footer-tel._mobile {
+        position: absolute;
+        top: -34px;
+        right: 0;
+    }
+
+    .footer-tel._mobile+.footer-tel._mobile {
+        top: 4px;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .footer-nav {
+        row-gap: 13px;
+    }
+
+    .footer-title.footer-tit-list {
+        margin-top: 9px;
+        margin-bottom: 17px;
+    }
+}
+
+@media (max-width: 450px) {
+    .menu-box._additionally .menu-thumb {
+        height: 38vw;
+        flex-basis: calc(100% - 130px - 20px);
+    }
+
+    .menu-item._additionally .menu-info {
+        flex-basis: 130px;
+    }
 }
