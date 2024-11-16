@@ -18,6 +18,7 @@
     <header class="header" id="headerTop">
         <div class="container">
             <div class="header-wrapper">
+                <button class="burger-menu" onclick="openModal()"></button>
                 <div class="logo"></div>
                 <nav class="nav">
                     <a href="#" class="nav-link">Главная</a>
@@ -125,30 +126,36 @@
                 <div class="menu-header">
                     <h2 class="menu-title">Дополнительно</h2>
                 </div>
-                <div class="menu-box">
-                    <div class="menu-item">
+                <div class="menu-box _additionally">
+                    <div class="menu-item _additionally">
                         <div class="menu-thumb">
                             <img src="images/menu/01-additionally.jpeg" alt="Сэндвич">
                         </div>
-                        <h3 class="menu-name">Сэндвич</h3>
-                        <p class="menu-price">$3</p>
-                        <button type="button" class="menu-btn">Купить</button>
+                        <div class="menu-info">
+                            <h3 class="menu-name">Сэндвич</h3>
+                            <p class="menu-price">$3</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
                     </div>
-                    <div class="menu-item">
+                    <div class="menu-item _additionally">
                         <div class="menu-thumb">
                             <img src="images/menu/02-additionally.jpeg" alt="Картошка Фри">
                         </div>
-                        <h3 class="menu-name">Картошка Фри</h3>
-                        <p class="menu-price">$5</p>
-                        <button type="button" class="menu-btn">Купить</button>
+                        <div class="menu-info">
+                            <h3 class="menu-name">Картошка Фри</h3>
+                            <p class="menu-price">$5</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
                     </div>
-                    <div class="menu-item">
+                    <div class="menu-item _additionally">
                         <div class="menu-thumb">
                             <img src="images/menu/03-additionally.jpeg" alt="Хот-Дог">
                         </div>
-                        <h3 class="menu-name">Хот-Дог</h3>
-                        <p class="menu-price">$7</p>
-                        <button type="button" class="menu-btn">Купить</button>
+                        <div class="menu-info">
+                            <h3 class="menu-name">Хот-Дог</h3>
+                            <p class="menu-price">$7</p>
+                            <button type="button" class="menu-btn">Купить</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,6 +173,8 @@
                         <a href="#" class="footer-link">Методы оплаты</a>
                         <a href="contact.html" class="footer-link">Контакты</a>
                     </nav>
+                    <a class="footer-tel _mobile" href="tel:+79007871313">+ 7 900 787 13-13</a>
+                    <a class="footer-tel _mobile" href="tel:+79007001414">+ 7 900 700 14-14</a>
                 </div>
                 <div class="footer-item">
                     <h3 class="footer-title">Основные информация</h3>
@@ -189,6 +198,15 @@
         </div>
     </footer>
     <a href="#headerTop" class="button-up hidden visible" id="btnUp">Наверх</a>
+    <div class="modal" id="modal">
+        <nav class="nav _modal">
+            <a href="#" class="nav-link">Главная</a>
+            <a href="index.html" class="nav-link">Меню</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="contact.html" class="nav-link">Контакты</a>
+        </nav>
+        <button class="modal-close" onclick="closeModal()"></button>
+    </div>
     <script src="scripts/script.js"></script>
 </body>
 
