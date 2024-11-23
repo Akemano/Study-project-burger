@@ -12,12 +12,15 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/normalize.min.css">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
             <div class="header-wrapper">
+                <button class="burger-menu" onclick="openModal()"></button>
                 <div class="logo"></div>
                 <nav class="nav">
                     <a href="#" class="nav-link">Главная</a>
@@ -53,7 +56,7 @@
                     </div>
                     <div class="contact-map-info">
                         <ul class="contact-map-list">
-                            <li class="map-info-item">
+                            <li class="map-info-item moscow">
                                 <h3 class="map-info-title">Москва</h3>
                                 <span class="map-info-adress">пер. Плотников 22, стр.3</span><br>
                                 Бесплатная доставка
@@ -107,9 +110,11 @@
                         <a href="#" class="footer-link">Методы оплаты</a>
                         <a href="contact.html" class="footer-link">Контакты</a>
                     </nav>
+                    <a class="footer-tel _mobile" href="tel:+79007871313">+ 7 900 787 13-13</a>
+                    <a class="footer-tel _mobile" href="tel:+79007001414">+ 7 900 700 14-14</a>
                 </div>
                 <div class="footer-item">
-                    <h3 class="footer-title">Основные информация</h3>
+                    <h3 class="footer-title footer-tit-list">Основные информация</h3>
                     <ul class="footer-list">
                         <li>
                             <span class="footer-span">Время</span>
@@ -129,6 +134,17 @@
             </div>
         </div>
     </footer>
+    <a href="#headerTop" class="button-up hidden visible" id="btnUp">Наверх</a>
+    <div class="modal" id="modal">
+        <nav class="nav _modal">
+            <a href="#" class="nav-link">Главная</a>
+            <a href="index.html" class="nav-link">Меню</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="contact.html" class="nav-link">Контакты</a>
+        </nav>
+        <button class="modal-close" onclick="closeModal()"></button>
+    </div>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

@@ -571,14 +571,12 @@ a {
 .contact-map {
     width: 680px;
     height: 550px;
-    background-color: #D8D8D8;
 }
 
 .contact-map-info {
     display: flex;
     align-items: center;
     margin-left: 20px;
-    width: 360px;
 }
 
 .contact-map-list {
@@ -615,8 +613,6 @@ a {
     display: flex;
     justify-content: space-around;
     margin-top: 62px;
-    padding-left: 35px;
-    width: 1182px;
     height: 82px;
 }
 
@@ -665,7 +661,6 @@ a {
 
 .contact-icon-tel {
     position: relative;
-    margin-left: 45px;
 }
 
 .contact-icon-time {
@@ -731,6 +726,72 @@ a {
         margin-left: 0;
         gap: min(3vw, 30px);
     }
+
+    .contact-icons {
+        justify-content: space-evenly;
+        gap: 50px;
+        width: 1025px;
+    }
+}
+
+@media (max-width: 975px) {
+    .contact {
+        margin-top: 100px;
+    }
+
+    .contact-main {
+        flex-direction: column;
+    }
+
+    .contact-map {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .contact-map-info {
+        margin-left: 0px;
+        display: block;
+    }
+
+    .contact-map-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .map-info-title {
+        margin-left: 0px;
+    }
+
+    .map-info-item {
+        width: 65%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .contact-icons {
+        margin-top: 110px;
+        justify-content: space-around;
+        width: auto;
+    }
+
+    .contact-icon-time::before {
+        left: 15%;
+        top: -90px;
+        margin-top: 0px;
+    }
+
+    .contact-icon-tel::before {
+        left: 28%;
+        top: -90px;
+        margin-top: 0px;
+    }
+
+    .contact-icon-place::before {
+        left: 23%;
+        top: -90px;
+        margin-top: 0px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -753,7 +814,7 @@ a {
 
     .banner-wrapper {
         padding: 100px 40px;
-        background-position: center;
+        background-position: left center;
     }
 
     .menu-header {
@@ -784,7 +845,11 @@ a {
         flex-basis: 40%;
     }
 
-    footer {
+    .contact-icons {
+        justify-content: space-around;
+    }
+
+    .footer {
         padding-top: 62px;
         padding-bottom: 71px;
     }
@@ -876,6 +941,35 @@ a {
 
     .hero-description {
         font-size: 12px;
+    }
+
+    .contact {
+        margin-top: 75px;
+        margin-bottom: 80px;
+    }
+
+    .map-info-title {
+        font-size: 18px;
+    }
+
+    .map-info-adress {
+        font-size: 14px;
+    }
+
+    .map-info-item {
+        font-size: 14px;
+    }
+
+    .contact-tel {
+        font-size: 18px;
+    }
+
+    .contact-icon-time span {
+        font-size: 18px;
+    }
+
+    .contact-icon-place span {
+        font-size: 18px;
     }
 
     .banner {
